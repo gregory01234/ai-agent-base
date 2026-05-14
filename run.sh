@@ -3,7 +3,7 @@
 set -e
 
 REPO="https://github.com/gregory01234/ai-agent-base.git"
-DIR="$HOME/ai-agent-base"
+DIR="/tmp/ai-agent-base"
 IMAGE="ai-agent-base:latest"
 
 echo "🧠 AI Agent Base bootstrap starting..."
@@ -14,7 +14,7 @@ if [ -d "$DIR" ]; then
   rm -rf "$DIR"
 fi
 
-# 2. clone fresh
+# 2. clone fresh (clean workspace)
 echo "📥 Cloning repo..."
 git clone "$REPO" "$DIR"
 
