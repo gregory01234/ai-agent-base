@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; else echo "no requirements file"; fi
 
 CMD ["python", "app/main.py"]
